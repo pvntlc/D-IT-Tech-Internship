@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navigator</title>
+    <script type="text/javascript">
+
+		console.log("Browser CodeName 	: " + navigator.appCodeName);
+		console.log("Browser Name 		: " + navigator.appName);
+		console.log("Browser Version 	: " + navigator.appVersion);
+		console.log("Browser Enabled 	: " + navigator.cookieEnabled);
+		console.log("Platform 		: " + navigator.platform);
+		console.log("User-Agent header 	: " + navigator.languages);
+
+	</script>
+</head>
+<body>
+    
+</body>
+</html>

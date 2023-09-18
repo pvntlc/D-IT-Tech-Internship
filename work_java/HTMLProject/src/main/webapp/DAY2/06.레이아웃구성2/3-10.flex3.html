@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <link rel="stylesheet" href="./css/03.css">
+    <style>
+      #sidebar {
+        display:flex; /* 플렉스 컨테이너 지정 */
+        flex-direction: column;    
+      }
+      .menu {
+      padding:5px 45px;
+      margin:5px;   
+	  	width:60px;
+      background-color:aliceblue;   
+    }
+    </style>
+</head>
+<body>
+  <!-- box-sizing 속성을 통한 박스 모델 크기 계산 -->
+  <header>
+    <h2 class="logo">My Bank</h2>
+    <nav>
+        <ul id="topMenu">
+            <li><a href="#">개인뱅킹</a></li>
+            <li class="withborder"><a href="#">기업뱅킹</a></li>
+            <li><a href="#">상품</a></li>
+            <li><a href="#">문의하기</a></li>
+        </ul>
+    </nav>
+  </header>
+  <div class="container">
+  <div id="sidebar"> 
+    <div class="menu"><p>메뉴1</p></div>
+    <div class="menu"><p>메뉴2</p></div>
+    <div class="menu"><p>메뉴3</p></div>
+    <div class="menu"><p>메뉴4</p></div>
+    <div class="menu"><p>메뉴5</p></div>
+    <div class="menu"><p>메뉴6</p></div>    
+ </div>
+  <div id="contents">
+    <div>
+          <table border="1">
+              <caption>
+                상품 리스트
+              </caption>
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>상품명</th>
+                  <th>최초 납임금</th>
+                  <th>가입기간</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="cellPadding">1</td>
+                  <td class="cellPadding">정기예금</td>
+                  <td class="cellPadding">1000원</td>
+                  <td class="cellPadding">60개월</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>주택청약저축</td>
+                  <td>10000원</td>
+                  <td rowspan="2">최대 10년</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>자유적금</td>
+                  <td>0원</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>연금통장</td>
+                  <td colspan="2">-</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                  <tr>
+                    <td>상품합계</td>
+                    <td colspan="3">4개</td>
+                  </tr>
+                </tfoot>
+            </table>
+      </div>
+    </div>
+  </div>
+    <footer>
+      <section id="bottomMenu">
+        <ul>
+          <li><a href="#">회사 소개</a></li>
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">사이트약관</a></li>
+          <li><a href="#">사이트맵</a></li>
+        </ul>
+      </section>
+    </footer>
+</body>
+</html>

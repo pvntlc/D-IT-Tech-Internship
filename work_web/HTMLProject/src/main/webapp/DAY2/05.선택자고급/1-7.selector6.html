@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sibling Selector(형제선택자)</title>
+    <style type="text/css">
+      /* div 바로 인접한 형제 선택자 */
+      div + p {
+        background: lightgray;
+        color: orange;
+      }
+      /* class=target인 div 태그의 모든 형제 태그 중 p태그 선택 */
+      div.target ~ p {
+        background: green;
+        color: skyblue;
+      }
+    </style>
+</head>
+<body>
+  <div>div 태그</div>
+  <p>div + p 1 인접 형제 </p>
+  <p>div + p 2 인접 형제</p>
+  <div class="target">클래스가 target인 div 태그</div>
+  <p>target ~ p 1 형제 선택자 확인</p>
+  <p>target ~ p 2 형제 선택자 확인</p>
+  <div>div태그</div>
+  <p>target ~ p 3 형제 선택자 확인</p>
+</body>
+</html>

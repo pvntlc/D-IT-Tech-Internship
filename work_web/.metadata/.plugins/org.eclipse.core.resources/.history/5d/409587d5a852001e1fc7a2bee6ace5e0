@@ -1,0 +1,22 @@
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class AccountServiceImpl {
+
+	public void reg(HttpServletRequest request, HttpServletResponse response) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void list(HttpServletRequest request, HttpServletResponse response) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void view(HttpServletRequest request, HttpServletResponse response) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+
+}

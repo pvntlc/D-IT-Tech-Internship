@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>부산은행</title>
+<link rel="stylesheet" type="text/css" href="indexcss.css" />
+<style>
+	h2.logo{
+    font-size:40px;   /* 글자 크기 */
+    font-weight:bold;
+    /* 2-2이후 추가 */
+    color:#53565A;   /* 글자 색*/
+    text-shadow:0 -1px 0 #222;  /* 그림자 색 */
+    text-align: left;
+    /* 텍스트를 세로로 가운데 정렬하기 위해 height와 line-height를 동일한 크기로 설정 */
+    line-height: 60px;
+    height: 60px;
+    /* 대소문자 변환 */ 
+    text-transform: uppercase;
+    /* 글자 간격 조정 */
+    letter-spacing: 2px;
+    text-decoration: underline;
+    text-decoration-color: rgb(203, 51, 59) ;
+}
+	nav ul li{
+        /* display 속성에 따라서 어떻게 변경되는지 확인해보자. */
+        display: inline;
+        /* display: block; */
+        /* display: inline-block; */
+        font-weight: bold;
+        margin-right : 10px;
+      }
+      footer ul li{
+        /* display 속성에 따라서 어떻게 변경되는지 확인해보자. */
+        display: inline;
+        /* display: block; */
+        /* display: inline-block; */
+        margin-right : 10px;
+        float : right
+      }
+      .banner{
+		  background-color: rgb(228, 244, 254);
+		  font-size: 20px;
+		  text-align: center;
+		  padding: 3%;
+	  }
+      
+      .contents {
+      display:flex; /* 플렉스 컨테이너 지정 */
+      margin-bottom:30px;
+    }
+    .contents button{
+		float:right;
+	}
+	.title{
+		font-size: 20px;
+		font-weight: bold;	
+	}
+</style>
+</head>
+<body>
+	<div id ="container">
+		<nav>
+			<ul>
+				<li class="title">안산은행</li>
+				<li><a href="./personal.html">개인</a></li>
+				<li><a href="./business.html">기업</a></li>
+				<li><a href="./login.html">로그인</a></li>
+				<li><a href="./register.html">회원가입</a></li>
+			</ul>
+		</nav>
+		<div class="banner">고객을 향한 단 하나의 진심, BNK 부산은행</div>
+		<main class ="contents">
+			<section id = "main1">
+				<img src="pingu.jpg" title="핑구 이미지 입니다." width="200px" alt="이미지가 없으면 대체되어 나옵니다."/>
+				<h2>main-item1</h2>
+				점심을 먹고 저녁을 먹고 오늘은 축구를 합니다.
+				</br><button>button1</button>
+			</section>
+			<section id = "main2">
+				<img src="pingu.jpg" title="핑구 이미지 입니다." width="200px" alt="이미지가 없으면 대체되어 나옵니다."/>
+				<h2>main-item2</h2>
+				점심을 먹고 저녁을 먹고 오늘은 축구를 합니다.
+				</br><button>button2</button>
+			</section>
+			<section id = "main3">
+				<img src="pingu.jpg" title="핑구 이미지 입니다." width="200px" alt="이미지가 없으면 대체되어 나옵니다."/>
+				<h2>main-item3</h2>
+				점심을 먹고 저녁을 먹고 오늘은 축구를 합니다.
+				</br><button>button3</button>
+			</section>
+		</main>
+		<footer>
+			<hr>
+			<ul>
+				<li>경기도 안산시 상록구 감골2로 47</li>
+				<li>010-3380-6340</li>
+			</ul>
+		</footer>
+	</div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.spanstyle {
+position:absolute;
+visibility:hidden;
+}
+</style>
+ 
+<script>
+<!-- Beginning of JavaScript -
+ 
+var debrisnumber=40
+var debriscolor=new Array()
+debriscolor[0]="YELLOW"
+debriscolor[1]="NAVY"
+debriscolor[2]="RED"
+debriscolor[3]="PINK"
+debriscolor[4]="ORANGE"
+var x_debrispos
+var y_debrispos
+var x,y
+var x_random=new Array()
+var y_random=new Array()
+var max_explsteps=20
+var i_explsteps=0
+var i_color=0
+var pause=10
+ 
+function checkbrowser() {
+i_explsteps=0
+x_debrispos=x
+y_debrispos=y
+for (i=0;i<=debrisnumber;i++) {
+x_random[i]=Math.ceil(40*Math.random())-20
+y_random[i]=Math.ceil(40*Math.random())-20
+}
+if (document.all) {
+for (i=0;i<=debrisnumber;i++) {
+var thisspan=eval("document.all.span"+i+".style")
+thisspan.visibility="VISIBLE"
+thisspan.posLeft=x_debrispos
+thisspan.posTop=y_debrispos
+}
+explode_IE()
+}
+if (document.layers) {
+for (i=0;i<=debrisnumber;i++) {
+var thisspan=eval("document.span"+i)
+thisspan.visibility="VISIBLE"
+thisspan.le
+ 
+ft=x_debrispos
+thisspan.top=y_debrispos
+}
+explode_NN()
+}
+}
+ 
+function explode_IE() {
+if (i_explsteps<=max_explsteps) {
+for (i=0;i<=debrisnumber;i++) {
+var thisspan=eval("document.all.span"+i+".style")
+thisspan.posLeft+=x_random[i]
+thisspan.posTop+=y_random[i]
+}
+i_explsteps++
+var timer=setTimeout("explode_IE()",pause)
+}
+else {
+for (i=0;i<=debrisnumber;i++) {
+var thisspan=eval("document.all.span"+i+".style")
+thisspan.visibility="HIDDEN"
+}
+clearTimeout(timer)
+}
+}
+ 
+function explode_NN() {
+if (i_explsteps<=max_explsteps) {
+for (i=0;i<=debrisnumber;i++) {
+var thisspan=eval("document.span"+i)
+thisspan.left+=x_random[i]
+thisspan.top+=y_random[i]
+}
+i_explsteps++
+var timer=setTimeout("explode_NN()",pause)
+}
+else {
+for (i=0;i<=debrisnumber;i++) {
+var thisspan=eval("document.span"+i)
+thisspan.visibility="HIDDEN"
+}
+clearTimeout(timer)
+}
+}
+ 
+function handlerMM(e){
+x = (document.layers) ? e.pageX : document.body.scrollLeft+event.clientX
+y = (document.layers) ? e.pageY : document.body.scrollTop+event.clientY
+}
+ 
+if (document.layers){
+document.captureEvents(Event.MOUSEMOVE);
+}
+document.onmousemove = handlerMM;
+ 
+// - End of JavaScript - -->
+</script>
+ 
+<body>와 </body> 사이에 넣는다.
+ 
+<script>
+<!-- Beginning of JavaScript -
+for (i=0;i<=debrisnumber;i++) {
+document.write("<div id='span"+i+"' class='spanstyle'>")
+document.write("<table cellpadding=0 cellspacing=0>")
+document.write("<tr><td bgcolor="+debriscolor[i_color]+">")
+document.write("<img src='emptypixel236.gif' width=3>")
+document.write("</td></tr></table>")
+document.write("</div>")
+i_color++
+if (i_color>=debriscolor.length) {i_color=0}
+}
+// - End of JavaScript - -->
+</script>
+ 
+<body>와 <body>사이 링크걸린 글자가 들어갈 부분에 넣는다.
+ 
+<a href="#" onMouseOver="checkbrowser()" ><b>여기에 마우스 커서를 올려보세여</b></a>
+</head>
+<body>
+
+</body>
+</html>

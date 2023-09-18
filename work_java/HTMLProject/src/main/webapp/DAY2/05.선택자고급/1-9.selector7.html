@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classes Selector(가상클래스선택자)</title>
+    <style type="text/css">
+      a:link {
+        color: gray;
+        text-decoration: none;
+      }
+      a:visited {
+        color: red;
+        text-decoration: none;
+      }
+      a:hover {
+        color: green;
+        text-decoration: underline;
+        font-weight: bold;
+      }
+      a:active {
+        color: blue;
+        text-decoration: none;
+      }
+      li:nth-child(5) {
+        color: magenta;
+      }
+      li:nth-child(3n + 1) {
+        color: skyblue;
+      }
+      li:last-child {
+        color: orange;
+      }
+    </style>
+</head>
+<body>
+  <a href="http://www.goog1le.com">Google</a>
+  <a href="http://www.naver.com">Naver</a>
+  <a href="http://www.daum.net">Daum</a>
+  <ul>
+    <li>첫 번째 li</li>
+    <li>두 번째 li</li>
+    <li>세 번째 li</li>
+    <li>네 번째 li</li>
+    <li>다섯 번째 li</li>
+    <li>여섯 번째 li</li>
+    <li>일곱 번째 li</li>
+    <li>여덟 번째 li</li>
+  </ul>
+</body>
+</html>

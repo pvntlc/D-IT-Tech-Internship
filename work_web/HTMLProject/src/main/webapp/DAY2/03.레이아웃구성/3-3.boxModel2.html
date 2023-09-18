@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model(box-sizing)</title>
+    <style>
+      div {
+        margin-bottom:20px;
+      }
+      .logo1 {
+        width:200px;
+        height:100px;
+        padding:20px;
+        border:10px solid #ccc;
+         /* 오른쪽 윗부분에 그림자 */
+        box-shadow:2px -2px 5px 0px;
+      }
+      .logo2 {
+        box-sizing: border-box;
+        width:200px;
+        height:100px;
+        padding:20px;
+        border:10px solid #00f;
+         /* 오른쪽 아랫부분에 파란색 그림자 */
+         box-shadow:5px 5px 15px 5px blue;
+      }
+
+      
+    </style>
+</head>
+<body>
+  <!-- box-sizing 속성을 통한 박스 모델 크기 계산 -->
+  <div>
+    <h2 class="logo1">My Bank</h2>
+    <h2 class="logo2">My Bank</h2>
+  </div>
+    <!-- 아래는 따로 스타일이 적용되지 않으므로 신경쓰지 말자. -->
+    <nav>
+        <ul id="topMenu">
+            <li><a href="#">개인뱅킹</a></li>
+            <li class="withborder"><a href="#">기업뱅킹</a></li>
+            <li><a href="#">상품</a></li>
+            <li><a href="#">문의하기</a></li>
+        </ul>
+    </nav>
+    <div>
+        <table border="1">
+            <caption>
+              상품 리스트
+            </caption>
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>상품명</th>
+                <th>최초 납임금</th>
+                <th>가입기간</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="cellPadding">1</td>
+                <td class="cellPadding">정기예금</td>
+                <td class="cellPadding">1000원</td>
+                <td class="cellPadding">60개월</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>주택청약저축</td>
+                <td>10000원</td>
+                <td rowspan="2">최대 10년</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>자유적금</td>
+                <td>0원</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>연금통장</td>
+                <td colspan="2">-</td>
+              </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                  <td>상품합계</td>
+                  <td colspan="3">4개</td>
+                </tr>
+              </tfoot>
+          </table>
+    </div>	  
+</body>
+</html>

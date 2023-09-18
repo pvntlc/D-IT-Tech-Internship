@@ -1,0 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>결과 페이지</h1>
+제목 : ${title}<br/>
+글쓴이 : ${writer}<br/>
+내용 :  ${msg}
+<a href="index.html">메인페이지로 돌아가자!</a>
+</body>
+</html>

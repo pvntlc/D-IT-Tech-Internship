@@ -1,0 +1,44 @@
+package com.bnk.user;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import com.bnk.util.DBPool;
+
+public class UserDAOImpl implements UserDAO {
+	@Override
+	public boolean login(String user, String pw) throws SQLException {
+		boolean result = false;
+		Connection con = DBPool.getConnection();
+		String sql = "SELECT NAME FROM USERS WHERE EMAIL = '" + user +"' AND PASSWORD = '" + pw +"'";
+		System.out.println(sql);
+		PreparedStatement ps = con.prepareStatement(sql);
+		ResultSet rs = ps.executeQuery();
+		if (rs.next()) {
+			result = true;
+		}
+		DBPool.release(ps, con);
+		return result;
+	}
+
+	public void add(String user, String email, String phone, String password) {
+		Connection con = DBPool.getConnection();
+		String sql = "INSERT INTO USERS VALUES(user_seq.nextval, ?,?,?,?)";
+		PreparedStatement ps;
+		try {
+			ps = con.prepareStatement(sql);
+			ps.setString(1, user);
+			ps.setString(2, email);
+			ps.setString(3, phone);
+			ps.setString(4, password);
+			ps.executeUpdate();
+			DBPool.release(ps, con);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>jquery - selector</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+       
+          $("*").css("border", "solid 1px blue cyan");
+          $("h2").css("color", "orange");
+          $("p#target").css("color", "magenta");
+          $(".item").css("background-color", "cyan");
+       
+      });
+
+    </script>
+  </head>
+  <body>
+    <h2>제목이 들어갈 자리입니다.</h2>
+    <p class="item" id="target">간단 요약이 들어갈 자리입니다.</p>
+    <p class="item">또 다른 요약이 들어갈 자리입니다.</p>
+    <div>
+      <div id="content">상세 내용이 들어갈 자리입니다.</div>
+    </div>
+  </body>
+</html>

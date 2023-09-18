@@ -1,0 +1,19 @@
+.banner {
+	background-color: rgb(228, 244, 254);
+	font-size: 20px;
+	text-align: center;
+	padding: 3%;
+}
+
+h2 {
+	text-align: center;
+}
+
+.loginform {
+	border: 1px solid lightgray;
+	padding: 30px;
+}
+
+.loginbutton {
+	float: right;
+}

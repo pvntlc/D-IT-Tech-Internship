@@ -1,0 +1,26 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
+<%@include file="header.jsp"%> <!--  코드를 포함해서 컴파일 -->
+<jsp:include page="header.jsp"> <!--  실행결과를 포함해서 컴파일 -->
+
+<%@taglib %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<%
+	String num = request.getParameter("num");
+	String user = request.getParameter("user");
+
+	out.println(num);
+	out.println(user);
+	%>
+	<p />
+	user:<%=user%>
+
+</body>
+</html>

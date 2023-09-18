@@ -1,0 +1,65 @@
+
+public class AccountDTO {
+	private String aseq;
+	private int cseq;
+	private int pseq;
+	private int balance;
+	private String password;
+	public AccountDTO() {
+		super();
+	}
+	public AccountDTO(String aseq, int cseq, int pseq, int balance, String password) {
+		super();
+		this.aseq = aseq;
+		this.cseq = cseq;
+		this.pseq = pseq;
+		this.balance = balance;
+		this.password = password;
+	}
+	public String getAseq() {
+		return aseq;
+	}
+	public void setAseq(String aseq) {
+		this.aseq = aseq;
+	}
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("AccountDto [aseq=");
+		builder.append(aseq);
+		builder.append(", cseq=");
+		builder.append(cseq);
+		builder.append(", pseq=");
+		builder.append(pseq);
+		builder.append(", balance=");
+		builder.append(balance);
+		builder.append(", password=");
+		builder.append(password);
+		builder.append("]");
+		return builder.toString();
+	}
+	public int getCseq() {
+		return cseq;
+	}
+	public void setCseq(int cseq) {
+		this.cseq = cseq;
+	}
+	public int getPseq() {
+		return pseq;
+	}
+	public void setPseq(int pseq) {
+		this.pseq = pseq;
+	}
+	public int getBalance() {
+		return balance;
+	}
+	public void setBalance(int balance) {
+		this.balance = balance;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+}

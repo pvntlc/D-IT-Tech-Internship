@@ -1,0 +1,24 @@
+package com.bnk.user;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import com.bnk.util.DBPool;
+
+public class UserDAOImpl implements UserDAO {
+	@Override
+	public boolean login(String user, String pw) throws SQLException {
+		boolean result=false;
+		Connection con=DBPool.getConnection();
+		String sql="select * from users where username=? and pw=?";
+		PreparedStatement ps=con.prepareStatement(sql);
+		ps.setString(1, user);
+		ps.setString(2, pw);
+		ResultSet rs=ps.executeQuery();
+		if(rs.next())  result=true;
+		DBPool.release(ps, con);
+		return result;
+	}
+}

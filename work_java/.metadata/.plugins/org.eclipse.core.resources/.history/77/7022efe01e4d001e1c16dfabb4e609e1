@@ -1,0 +1,22 @@
+/* 전체 폰트 스타일 지정 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@600&display=swap');
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+/* MY BANK 디자인 설정을 위한 부분 */
+h2.logo{
+    font-size:40px;   /* 글자 크기 */
+    font-weight:bold;
+    color:#53565A;   /* 글자 색*/
+    text-shadow:0 -1px 0 #222;  /* 그림자 색 */
+    text-align: left;
+    /* 텍스트를 세로로 가운데 정렬하기 위해 height와 line-height를 동일한 크기로 설정 */
+    line-height: 60px;
+    height: 60px;
+    /* 대소문자 변환 */ 
+    text-transform: uppercase;
+    /* 글자 간격 조정 */
+    letter-spacing: 2px;
+    text-decoration: underline;
+    text-decoration-color: rgb(203, 51, 59) ;
+}

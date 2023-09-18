@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float</title>
+    <link rel="stylesheet" href="./css/3-5.css">
+    <style>
+      /* float, clear 확인하기 */
+      div {
+        padding:20px;
+        margin:10px;
+      }
+      #box1{
+        background:#ffd800;
+        float:top;  /* 왼쪽으로 플로팅 */ 
+      }
+      #box2 {
+        background: #0094ff;
+         /* 왼쪽으로 플로팅  - 순서대로 배치*/
+        /* float:left;  */
+        /* 오른쪽으로 플로팅 */
+        float: right;
+      }
+      #box3 {
+        background: #00ff21;
+        /* 플로팅 해제 */
+        /* clear:left;   */
+      }
+
+
+      /* 실제 레이아웃에 적용해보기 */
+      header {
+        height: 100px;
+        line-height: 100px;
+      }
+      .logo{
+        /* 왼쪽으로 떠있게 만들기 */
+        float: left;
+      }
+      nav ul{
+        /* 오른쪽으로 떠있게 만들기 */
+        float: right;
+        margin-right: 10px;
+        /* float 속성을 해제하는 clear 속성 */
+        /* clear: left; */
+      }
+      nav ul li{
+      display: inline-block;
+      }
+    </style>
+</head>
+<body>
+  <header>
+    <h2 class="logo">My Bank</h2>
+    <nav>
+        <ul id="topMenu">
+            <li><a href="#">개인뱅킹</a></li>
+            <li class="withborder"><a href="#">기업뱅킹</a></li>
+            <li><a href="#">상품</a></li>
+            <li><a href="#">문의하기</a></li>
+        </ul>
+    </nav>
+  </header>
+  <!-- float 속성 확인을 위한 div들 -->
+  <div id="box1">박스1</div>
+	<div id="box2">박스2</div>
+	<div id="box3">박스3</div>
+    <div>
+        <table border="1">
+            <caption>
+              상품 리스트
+            </caption>
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>상품명</th>
+                <th>최초 납임금</th>
+                <th>가입기간</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="cellPadding">1</td>
+                <td class="cellPadding">정기예금</td>
+                <td class="cellPadding">1000원</td>
+                <td class="cellPadding">60개월</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>주택청약저축</td>
+                <td>10000원</td>
+                <td rowspan="2">최대 10년</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>자유적금</td>
+                <td>0원</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>연금통장</td>
+                <td colspan="2">-</td>
+              </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                  <td>상품합계</td>
+                  <td colspan="3">4개</td>
+                </tr>
+              </tfoot>
+          </table>
+    </div>	  
+</body>
+</html>

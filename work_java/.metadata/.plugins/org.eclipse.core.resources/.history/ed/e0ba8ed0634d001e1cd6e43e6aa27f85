@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공지사항 입력</title>
+<style>
+body {
+    margin: 20px;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label, input, textarea {
+    display: block;
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 100%;
+}
+
+#noticeList {
+    margin-top: 20px;
+}
+
+</style>
+</head>
+<body>
+    <h1>공지사항 입력</h1>
+    <form id="noticeForm">
+        <label for="title">제목:</label>
+        <input type="text" id="title" name="title" required><br><br>
+        
+        <label for="content">내용:</label>
+        <textarea id="content" name="content" rows="4" required></textarea><br><br>
+        
+        <input type="submit" value="등록">
+    </form>
+
+    <div id="noticeList">
+        <!-- 여기에 등록된 공지사항 목록을 표시할 수 있습니다. -->
+    </div>
+
+</body>
+</html>

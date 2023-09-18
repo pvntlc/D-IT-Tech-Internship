@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>요소 추가</title>
+    <script>
+      window.onload = function () {
+        // 요소하나씩 모두 만들기
+        //   var topMenu = document.createElement("ul");
+        //   topMenu.setAttribute("id", "topMenu");
+        //   var list1 = document.createElement("li");
+        //   var anchor1 = document.createElement("a");
+        //   anchor1.setAttribute("href", "#");
+        //   var text1 = document.createTextNode("개인뱅킹");
+        //   anchor1.appendChild(text1);
+        //   list1.appendChild(anchor1);
+
+        //   var list2 = document.createElement("li");
+        //   list2.className = "withborder";
+        //   var anchor2 = document.createElement("a");
+        //   anchor2.setAttribute("href", "#");
+        //   var text2 = document.createTextNode("기업뱅킹");
+        //   anchor2.appendChild(text2);
+        //   list2.appendChild(anchor2);
+
+        //   var list3 = document.createElement("li");
+        //   var anchor3 = document.createElement("a");
+        //   anchor3.setAttribute("href", "#");
+        //   var text3 = document.createTextNode("상품");
+        //   anchor3.appendChild(text3);
+        //   list3.appendChild(anchor3);
+
+        //   var list4 = document.createElement("li");
+        //   var anchor4 = document.createElement("a");
+        //   anchor4.setAttribute("href", "#");
+        //   var text4 = document.createTextNode("문의하기");
+        //   anchor4.appendChild(text4);
+        //   list4.appendChild(anchor4);
+
+        //   topMenu.appendChild(list1);
+        //   topMenu.appendChild(list2);
+        //   topMenu.appendChild(list3);
+        //   topMenu.appendChild(list4);
+
+        //   var nav = document.getElementsByTagName("nav");
+        //   nav[0].appendChild(topMenu);
+
+        //백틱으로 만들기
+        var nav = document.querySelector("nav");
+        var temp = `<ul id="topMenu">
+          <li><a href="#">개인뱅킹</a></li>
+          <li class="withborder"><a href="#">기업뱅킹</a></li>
+          <li><a href="#">상품</a></li>
+          <li><a href="#">문의하기</a></li>
+        </ul>`;
+
+        nav.innerHTML = temp;
+      };
+    </script>
+  </head>
+  <body>
+    <header>
+      <h2 class="logo">My Bank</h2>
+      <nav>       </nav>
+    </header>
+
+   </body>
+</html>
+</html>

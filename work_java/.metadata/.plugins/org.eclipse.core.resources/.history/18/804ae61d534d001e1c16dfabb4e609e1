@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>로그인 log inin out</title>
+	<link rel="stylesheet" type="text/css" href="common.css" />
+	<link rel="stylesheet" type="text/css" href="navbar.css" />
+	<link rel="stylesheet" type="text/css" href="footer.css" />
+	<style>
+		h2 {
+			text-align: center;
+		}
+
+		.loginform {
+			border: 1px solid lightgray;
+			padding: 30px;
+		}
+
+		.loginbutton {
+			float: right;
+		}
+		
+		label{
+			margin-bottom : 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<nav>
+		<ul>
+			<li class="title">안산은행</li>
+			<li><a href="./personal.html">개인</a></li>
+			<li><a href="./business.html">기업</a></li>
+			<li><a href="./login.html">로그인</a></li>
+			<li><a href="./register.html">회원가입</a></li>
+		</ul>
+	</nav>
+	<div class="banner">고객을 향한 단 하나의 진심, BNK 부산은행</div>
+	<h2>Login</h2>
+	<div class="loginform">
+		<form method="get" action="login.jsp">
+			<li><label for="userid">아이디 <input type="text" id="userid" name="userid" /></label></li>
+			<li><label for="pass">비밀번호 <input type="password" id="pass" name="pass" /></label></li>
+			<hr>
+			<input class="loginbutton" type="submit" value="로그인" />
+		</form>
+	</div>
+	<footer>
+		<hr>
+		<ul>
+			<li>경기도 안산시 상록구 감골2로 47</li>
+			<li>010-3380-6340</li>
+		</ul>
+	</footer>
+</body>
+
+</html>

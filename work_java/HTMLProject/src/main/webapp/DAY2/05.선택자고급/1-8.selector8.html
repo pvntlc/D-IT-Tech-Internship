@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Selector(속성선택자)</title>
+    <style type="text/css">
+      /* []안의 속성이 일치 선택 */
+      [title] {
+        color: steelblue;
+        font-weight: bold;
+      }
+      /* [] 속성과 값 일치하는 태그 선택 */
+      [title="two"] {
+        border: 2px solid pink;
+      }
+      /* 태그+속성+값 모두 일치하는 태그 선택 */
+      p[title="two"] {
+        color: orange;
+      }
+      /* 속성값 중 하나라도 일치하면 선택 */
+      p[title~="second"] {
+        background: silver;
+      }
+      /* 속성값이 second로 시작하면 선택 */
+      p[class^="second"] {
+        background: cyan;
+      }
+      /* 속성값이 wrap으로 끝나면 선택 */
+      p[class$="wrap"] {
+        color: deeppink;
+        font-weight: bold;
+      }
+      /* 값 안에 three라는 문자열이 적어도 하나 존재하면 선택 */
+      [class*="three"] {
+        background: green;
+      }
+      /* 속성의 값이 정확하게 second이거나 second로 시작하면 선택 */
+      [class|="second"] {
+        background-color:  red;
+      }
+    </style>
+</head>
+<body>
+  <div title="one">selector [attribute name]</div>
+  <div title="two">selector [attribute name=value]</div>
+  <p title="two">selector [attribute name=value]</p>
+  <p title="first second third">selector [attribute name~=value]</p>
+  <p class="second">selector [attribute name^=value]</p>
+  <p class="second-wrap">selector [attribute name$=value]</p>
+  <div class="one-two-three">selector [attribute name|=value]</div>
+</body>
+</html>

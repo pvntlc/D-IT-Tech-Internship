@@ -1,0 +1,19 @@
+1693444521671	Delete element
+1693451020835	Move method
+1693451026542	Move method
+1693451953816	Extract interface 'ICarService'
+1693460311977	Copy compilation unit
+1693462344230	Copy package
+1693463656525	Copy compilation unit
+1693465682684	Rename package 'com.bnk.ws03.dto'
+1693465688971	Rename package 'com.bnk.ws03.service'
+1693465696325	Rename package 'com.bnk.ws03.view'
+1693466735227	Extract interface 'IAccountService'
+1693467338470	Move field
+1693467344198	Move method
+1693467578137	Rename method 'addUserAccount'
+1693478367039	Extract interface 'MovieMgrl'
+1693478602093	Copy compilation unit
+1693478604644	Copy compilation unit
+1693478606691	Copy compilation unit
+1693478608654	Copy compilation unit

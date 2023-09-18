@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>클릭 이벤트</title>
+    <link rel="stylesheet" href="./css/03.css" />
+    <script>
+      function openHello() {
+        alert("안녕하세요.");
+      }
+
+      var msg1 = function () {
+        var msg = document.querySelector(".logo");
+        alert(msg);
+        msg.style.color = "purple";
+        msg.style.fontSize = "30px";
+        msg.style.fontWeight = "bold";
+      };
+
+      window.onload = function () {
+        //이벤트 핸들러 프로퍼티 방식
+        /*
+      	  HTML에 직접 이벤트 핸들러를 등록하는 방법 대신에 JavaScript에서 이벤트 핸들러를 등록하는 방법이 있다.
+          JavaScript에서 이벤트 핸들러를 등록함으로써 HTML코드와 JavaScript 코드를 분리할 수 있다.
+          이벤트 대상이 되는 특정 DOM을 선택하고 이벤트 핸들러를 등록.
+      */
+        document.querySelector(".withborder").onclick = function () {
+          console.log("기업 뱅킹을 선택하였습니다.");
+        };
+
+        document.querySelector(".withborder").onclick = function () {
+          console.log("가장 마지막 이벤트가 실행");
+        };
+      };
+    </script>
+  </head>
+  <body>
+    <header>
+      <h2 class="logo" onclick="javacript:openHello(); msg1();">My Bank</h2>
+      <nav>
+        <!-- 메뉴 부분을 javascript로 만들어 추가해보기 -->
+        <ul id="topMenu">
+          <li><a href="#">개인뱅킹</a></li>
+          <li class="withborder"><a href="#">기업뱅킹</a></li>
+          <li><a href="#">상품</a></li>
+          <li><a href="#">문의하기</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <div id="sidebar">
+        <div class="menu"><p>메뉴1</p></div>
+        <div class="menu"><p>메뉴2</p></div>
+        <div class="menu"><p>메뉴3</p></div>
+        <div class="menu"><p>메뉴4</p></div>
+        <div class="menu"><p>메뉴5</p></div>
+        <div class="menu"><p>메뉴6</p></div>
+      </div>
+      <div id="contents">
+        <div class="productList">
+          <table border="1">
+            <caption>
+              상품 리스트
+            </caption>
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>상품명</th>
+                <th>최초 납임금</th>
+                <th>가입기간</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="cellPadding">1</td>
+                <td class="cellPadding">정기예금</td>
+                <td class="cellPadding">1000원</td>
+                <td class="cellPadding">60개월</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>주택청약저축</td>
+                <td>10000원</td>
+                <td rowspan="2">최대 10년</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>자유적금</td>
+                <td>0원</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>연금통장</td>
+                <td colspan="2">-</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td>상품합계</td>
+                <td colspan="3">4개</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+        <div class="productList">
+          <table border="1">
+            <caption>
+              상품 리스트
+            </caption>
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>상품명</th>
+                <th>최초 납임금</th>
+                <th>가입기간</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="cellPadding">1</td>
+                <td class="cellPadding">정기예금</td>
+                <td class="cellPadding">1000원</td>
+                <td class="cellPadding">60개월</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>주택청약저축</td>
+                <td>10000원</td>
+                <td rowspan="2">최대 10년</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>자유적금</td>
+                <td>0원</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>연금통장</td>
+                <td colspan="2">-</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td>상품합계</td>
+                <td colspan="3">4개</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+        <div id="wrapper">
+          <div class="card">
+            <h3>사진 제목</h3>
+            <figure>
+              <img src="./images/atm.jpg" width="30px" />
+            </figure>
+            <p>
+              사진 설명 : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, numquam.
+              Neque mollitia esse blanditiis facere.
+            </p>
+          </div>
+          <div class="card">
+            <h3>사진 제목</h3>
+            <figure>
+              <img src="./images/graph.jpg" />
+            </figure>
+            <p>
+              사진 설명 : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, numquam.
+              Neque mollitia esse blanditiis facere.
+            </p>
+          </div>
+          <div class="card">
+            <h3>사진 제목</h3>
+            <figure>
+              <img src="./images/atm.jpg" />
+            </figure>
+            <p>
+              사진 설명 : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, numquam.
+              Neque mollitia esse blanditiis facere.
+            </p>
+          </div>
+          <div class="card">
+            <h3>사진 제목</h3>
+            <figure>
+              <img src="./images/graph.jpg" />
+            </figure>
+            <p>
+              사진 설명 : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, numquam.
+              Neque mollitia esse blanditiis facere.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <section id="bottomMenu">
+        <ul>
+          <li><a href="#">회사 소개</a></li>
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">사이트약관</a></li>
+          <li><a href="#">사이트맵</a></li>
+        </ul>
+      </section>
+    </footer>
+  </body>
+</html>

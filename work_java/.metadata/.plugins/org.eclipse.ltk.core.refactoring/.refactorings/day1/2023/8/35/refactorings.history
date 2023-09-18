@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.bnk.statement.WorkShop1&apos; to &apos;WorkShop1_1&apos;&#x0D;&#x0A;- Original project: &apos;day1&apos;&#x0D;&#x0A;- Original element: &apos;com.bnk.statement.WorkShop1&apos;&#x0D;&#x0A;- Renamed element: &apos;com.bnk.statement.WorkShop1_1&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;WorkShop1&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.bnk.statement{WorkShop1.java[WorkShop1" matchStrategy="1" name="WorkShop1_1" qualified="false" references="true" similarDeclarations="false" stamp="1693211895782" textual="false" version="1.0"/>
+</session>

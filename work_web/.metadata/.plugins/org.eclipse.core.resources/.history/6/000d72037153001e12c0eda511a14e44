@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM 변경 - 화면에 태그 추가</title>
+    <script type="text/javascript">
+      window.onload = function () {
+        var html = document.getElementById("divHtml");
+       // var divText = document.getElementById("divText");
+
+        html.innerHTML = "<h2>Hello BNK!!!</h2>";
+        divText.innerText = "<h2>Hello BNK!!!...</h2>";
+
+        // 변수를 선언하고 element node와 text node 생성.
+        var title = document.createElement("h2");
+        var msg = document.createTextNode("텍스트가 화면에 표시됩니다.");
+
+        // text node를 element node에 추가.
+        title.appendChild(msg);
+        document.body.appendChild(title);
+      };
+    </script>
+  </head>
+  <body>
+    <div id="divHtml"></div>
+    <div id="divText"></div>
+    <div id="divTex1t"><h2>Hello BNK!!!...</h2></div>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form control</title>
+</head>
+<body>
+  <h2>form control - button</h2>
+
+  <form method="post" action="#" enctype="multipart/form-data">
+    <fieldset>
+      <legend>필수 입력</legend>
+      <ul type="none">
+        <li>
+          <label for="userid">아이디 : </label><input type="text" id="userid" name="userid" size="10" maxlength="16" value="아이디입력"/>
+        </li>
+        <li><label for="pass">비밀번호 : </label><input type="password" id="pass" name="pass"           size="10"
+          maxlength="16"
+          placeholder="비밀번호입력"/></li>
+      <li>
+        <h3>좋아하는 과일은?</h3>
+        <input type="checkbox" name="fruit" value="사과" /> 사과
+        <input type="checkbox" name="fruit" value="수박" checked="checked" /> 수박
+        <input type="checkbox" name="fruit" value="딸기" /> 딸기
+        <input type="checkbox" name="fruit" value="포도" /> 포도<br />
+      </li>
+      <li> 
+        <!-- label이 없으면 버튼을 정확히 눌러야함 -->
+        <h3>성별은?(label X)</h3>
+        <input type="radio" name="gender" value="m" /> 남
+        <input type="radio" name="gender" value="f" checked="checked" /> 여
+        <h3>성별은?(label O)</h3>
+        <label><input type="radio" name="gender" value="m" /> 남</label>
+        <label><input type="radio" name="gender" value="f" checked="checked" /> 여</label>
+      </li>
+      </ul>
+    </fieldset>
+    <fieldset>
+      <legend>선택 입력</legend>
+      <ul type="none">
+        <li>      
+          <label for="pnum"
+          >좋아하는 색상 선택 : <input type="color" id="pcolor" name="pcolor" value="#00ff00"
+        /></label></li>
+        <li>
+          <label for="birth">생년월일(8자리)</label>
+          <input type="number" id="birth" name="birth" size="10">
+        </li>
+        <li>
+          <label for="years">나이 : 
+            <!-- <input type="number" id="years" name="years" min="1" max="100" value="20" />살</label> -->
+            <input type="range" id="years" name="years" min="1" max="100" value="20" />살</label>
+          </li>
+        <li>
+          <label for="phone">전화번호 : </label><input type="tel" id="phone" name="phone"  size="15" maxlength="11"  />
+        </li>
+        <li>
+          <label for="address">주소 : </label><input type="text" id="address" name="address" />
+        </li>
+        <li>
+          <label for="mail">이메일 : </label>
+          <input type="email" id="mail" name="mail" />
+        </li>
+        <li>
+          <label for="homepage">홈페이지 : </label>
+          <input type="url" id="homepage" name="homepage" />
+        </li>
+        <!-- 사진 같은 파일을 첨부하여 전송할땐,  form 설정에서 enctype타입을 "multipart/form-data"으로 변경해야함-->
+        <li>
+          <label for="picture">사진첨부 : </label>
+          <input type="file" id="picture" name="picture" /></li>
+      </ul>
+    </fieldset>
+    <input type="submit" value="전송" />
+    <input type="reset" value="초기화" />
+    <!-- button은 submit이나 reset과 같이 자체 기능은 없고, 스크립트 함수와 연결해 사용. -->
+    <input type="button" value="반응없음" />
+    <input type="button" value="알림창" onclick="alert('일반 버튼입니다.');" />
+  </form>
+</body>
+</html>

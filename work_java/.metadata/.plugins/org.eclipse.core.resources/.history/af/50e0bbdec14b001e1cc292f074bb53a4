@@ -1,0 +1,12 @@
+package com.bnk;
+
+public class OracleTest {
+	public static void main(String[] args) {
+		//DB연동
+		//1.Driver 생성
+		//2. Connection 연동
+		//3. 쿼리 생성
+		//4. 쿼리 실행
+	}
+
+}

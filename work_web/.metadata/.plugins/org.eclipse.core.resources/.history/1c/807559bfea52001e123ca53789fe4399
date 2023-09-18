@@ -1,0 +1,20 @@
+package com.bnk.user;
+
+import java.sql.SQLException;
+import java.util.List;
+
+public interface UserDAO {
+
+	boolean login(String user, String pw) throws SQLException;
+
+	void add(String user1, String email, String phone, String password);
+
+	List<User> search();
+	
+	User search(int useq);
+	
+	void delete(int useq);
+	
+	void update(User u);
+
+}

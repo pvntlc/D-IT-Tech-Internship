@@ -1,0 +1,50 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>계좌 등록</title>
+
+<style>
+h1 {
+	text-align: center;
+}
+
+#container {
+	width: 400px;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	grid-gap: 5px 5px;
+	margin: auto;
+	margin-bottom: 10px;
+}
+
+#btn {
+	text-align: center;
+	margin: 5px;
+}
+
+label {
+	background-color: lightgray;
+	text-align: center;
+}
+</style>
+
+</head>
+<body>
+	<H1>계좌 등록하기</H1>
+	<form method="POST" action="AccountServlet?action=MODIFYSAVE">
+		<div id="container">
+			<label for="aseq">계좌번호</label><input type="text" id="aseq" name="aseq" required />
+			<label for="cseq">고객번호</label><input type="text" id="cseq" name="cseq" required />
+			<label for="pseq">상품번호</label><input type="text" id="pseq" name="pseq" required />
+			</div>
+		<div id="btn">
+			<input type="reset" value="취소" /><input type="submit" value="수정 완료" />
+		</div>
+
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+import java.io.IOException;
+import java.sql.SQLException;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+public class AccountServiceImpl {
+	AccountDAOImpl dao = new AccountDAOImpl();
+
+	public void reg(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		String aseq = request.getParameter("aseq");
+		String password = request.getParameter("password");
+		HttpSession hs = request.getSession();
+		int cseq = 0;
+		int pseq = 0;
+		
+		
+		AccountDTO ac = new AccountDTO(aseq, cseq, pseq, 0, password);
+		try {
+			dao.add(ac);
+			hs.setAttribute("msg", "정상적으로 등록되었습니다.");
+		}
+		catch(SQLException e) {
+			hs.setAttribute("msg", "등록 중 오류 발생");
+		}
+		
+		response.sendRedirect("result.jsp");
+		
+	}
+
+	public void list(HttpServletRequest request, HttpServletResponse response) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void view(HttpServletRequest request, HttpServletResponse response) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+
+}

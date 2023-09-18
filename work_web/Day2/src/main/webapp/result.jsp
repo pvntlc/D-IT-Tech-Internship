@@ -1,0 +1,39 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8" import="com.bnk.Car"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Decaffeine Americano</title>
+</head>
+<body>
+	request data :
+	<%=request.getAttribute("city")%>
+	<p />
+	<%
+	Car c = (Car) request.getAttribute("dto");
+	%>
+	<%=c.getNum()%>
+	:
+	<%=c.getPrice()%>
+	<p />
+	EL : CITY : ${city}
+	<br /> Car : ${dto.num} : ${dto.price}
+	<br /> Msg : ${msg}
+	<br />
+	<!-- 페이지 안에 있는지 가장 먼저 확인, 그 후 request 확인하고 그다음은 Session, 마지막으로 application을 확인한다. -->
+	data : ${data}
+	<br />
+	<p />
+	<h1>차량 리스트</h1>
+	<c:if test = "${empty cars}">
+	차량 데이터가 없습니다 ㅠ<br/>
+	</c:if>
+	<c:forEach var="c" items="${cars}">
+	차량 정보 : ${c.num} :: ${c.price } <br/>
+	</c:forEach>
+
+</body>
+</html>

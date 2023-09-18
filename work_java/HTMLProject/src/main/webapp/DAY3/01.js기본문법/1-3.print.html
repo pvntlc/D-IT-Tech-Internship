@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS의 기본 입출력</title>
+</head>
+<body>
+    <script>
+        // 알림창
+		alert("안녕하세요?");
+        // 확인창
+        var reply = confirm("입금하시겠습니까?");
+        // 입력창
+        var name = prompt("이름을 입력하세요.");
+        // 콘솔에 찍기
+        console.log(name + "님, 환영합니다.");	
+        // 화면에 반영
+		document.write("<b><big>" + name + "</big></b>님, 환영합니다.");	
+
+        var now = new Date();
+		var display = now.toLocaleTimeString();
+		document.write("현재 시각은 " + display);	
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 함수</title>
+
+    <script>
+      
+      // 함수 선언문
+      function myfun1(num) {
+        var sum = 0;
+        for (let i = 1; i <= num; i++) {
+          sum += i;
+        }
+        console.log(sum); // 55
+      }
+      myfun1(10);
+
+      // 함수 표현식
+      var myfun2 = function (num) {
+        var sum = 0;
+        for (let i = 1; i <= num; i++) {
+          sum += i;
+        }
+        console.log(sum); // 55
+      };
+      myfun2(10);
+
+      //즉시 실행 함수
+      (function(){
+		  document.write("<h1>Hello~~</h1>");
+	  }());
+	  
+	  
+	  // 람다함수
+	  let myfun3=  () => document.write("<h1>람다 함수 호출</h1>");
+	  
+	  myfun3();
+	  
+	  
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블로 이력서 만들어보기</title>
+</head>
+<body>
+    <table border="1" 
+    align="center" 
+    cellpadding="10"
+    cellspacing="2">
+        <caption>이력서</caption>
+        <thead>
+            <tr>
+                <th colspan="6">인적사항</th>
+            </tr>
+        </thead>
+        <tbody align="center">
+            <tr>
+                <td rowspan="4" colspan="2" style="width: 100px;" >사진</td>
+                <td>한글명</td>
+                <td>홍길동</td>
+                <td rowspan="2">주민등록번호</td>
+                <td rowspan="2">001231-3000000</td>
+            </tr>
+            <tr>
+                <td>영문명</td>
+                <td>Hong Gil-Dong</td>         
+            </tr>
+            <tr>
+                <td colspan="2">010-1234-1234</td>
+                <td>집전화(선택)</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td colspan="4" align="left">gildong12@bnk.com</td>
+            </tr>
+            <tr>
+                <td colspan="2" rowspan="3" align="center">주소</td>
+                <td>우편번호 </td>
+                <td colspan="3" align="left">1234</td>
+            </tr>
+            <tr>
+                <td>주소1</td>
+                <td colspan="3" align="left">서울특별시 강남구 역삼동</td>
+            </tr>
+            <tr>
+                <td>주소2</td>
+                <td colspan="3" align="left">bnk아파트 100동 100호</td>
+            </tr>
+            <tr>
+                <td colspan="6" style="text-align: center; font-weight: bold;">자기소개</td>
+            </tr>
+            <tr>
+                <td colspan="6" style="height: 300px;"></td>
+            </tr>
+        </tbody>
+    </table>
+    
+</body>
+</html>

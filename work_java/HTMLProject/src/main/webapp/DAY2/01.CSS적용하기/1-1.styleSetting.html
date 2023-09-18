@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타일 적용 방법</title>
+     <!--External Style Sheet 적용1  -->
+    <link rel="stylesheet" type="text/css" href="./css/1-1.css" />
+     <!-- Embedded Style Sheet -->
+     <style>
+        /* External Style Sheet 적용2 */
+        /* @import url("./css/1-1.css"); */
+        /*  1-1.css  내용
+			h2 {color: magenta;}
+			h2.em {color: steelblue;}
+			p {background-color: skyblue; color: purple;}
+		*/
+        h2 {
+        background-color: orange;
+        /* 외부 스타일 적용보다 우선시 됨 
+        그러나 외부 스타일 시트에서 class="em"이 적용 된 것보다는 우선순위 낮음*/
+        /* color: black; */
+        }
+        p {
+            background-color: skyblue  !important;
+            color: purple;
+        }
+        h3 {
+            background-color: blueviolet;
+        }
+      
+     </style>
+</head>
+<body>
+    <h2>External Style Sheet</h2>
+    <h2 class="em">External Style Sheet</h2>
+    <p>Using External Style Sheet !!!</p>
+    <h3>Embedded Style Sheet</h3>
+    <!-- Inline Style Sheet : 적용 방법 중 가장 큰 우선순위를 가짐 -->
+    <h2 style="color: cyan">Inline Style Sheet</h2>
+    <h2 class="em" style="color: cyan">Inline Style Sheet</h2>
+    <p style="background-color: rgb(255, 255, 128); color: purple">Using Inline Style Sheet !!!</p>
+</body>
+</html>

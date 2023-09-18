@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS text</title>
+    <style>
+        h2{
+            color : magenta;
+            background-color: steelblue;
+            text-align: center;
+            /* 줄간격 지정 */
+            /* line-height: 2.0; */
+            /* line-height: 0.8; */
+            /* 텍스트를 세로로 가운데 정렬하기 위해 height와 line-height를 동일한 크기로 설정 */
+            line-height: 100px;
+            height: 100px;
+            /* 텍스트 줄표시 여부 설정*/
+            /* text-decoration:underline; */
+            /* text-decoration: overline; */
+            text-decoration: line-through;
+            /* 텍스트 그림자 효과  */
+            /* 가로, 세로, 번짐정도, 색상 */
+            text-shadow: 1px 1px 3px black;
+        }
+        div {
+            font: 200px;
+            /* 텍스트 정렬 설정 */
+            text-align: justify;
+            /* text-align: left; */
+            /* text-align: right; */
+            /* text-align: justify; */
+      }
+
+      
+        .trans{
+            /* 대소문자 변환 */
+            /* text-transform: capitalize; */
+            /* text-transform: lowercase; */
+            text-transform: uppercase;
+            /* 글자 간격 조정 */
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 위 style태그의 선택자들에 적용된 내용을 변경해보면서, 적용되는 스타일을 확인해보세요. -->
+    <h2>나의 은행</h2>
+    <h2 class="trans">My Bank</h2>
+    <div>
+        CSS Text 속성 중 text-align은 text 정렬을 지정한다. 속성 값의 종류는 left, right, center,
+        justify이 있다. 속성 값에 따라 text를 왼쪽, 오른쪽, 중앙 정렬을 할 수 있다.
+    </div>
+</body>
+</html>

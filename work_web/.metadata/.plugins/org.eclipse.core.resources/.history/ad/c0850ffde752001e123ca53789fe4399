@@ -1,0 +1,11 @@
+package com.bnk.user;
+
+import java.sql.SQLException;
+
+public interface UserDAO {
+
+	boolean login(String user, String pw) throws SQLException;
+
+	void add(String user1, String email, String phone, String password);
+
+}

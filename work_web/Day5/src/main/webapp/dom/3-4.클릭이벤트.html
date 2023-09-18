@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>클릭 이벤트</title>
+    <script>
+      function openHello() {
+        alert("안녕하세요.");
+      }
+
+      var msg1 = function () {
+        var msg = document.querySelector(".logo");
+        alert("안녕");
+        msg.style.color = "red";
+        msg.style.fontSize = "30px";
+        msg.style.fontWeight = "bold";
+      };
+
+      window.onload = function () {
+        document.querySelector(".withborder").onclick = function () {
+           alert("기업 뱅킹을 선택하였습니다.");
+        };
+
+        document.querySelector(".withborder").onclick = function () {
+          alert("가장 마지막 이벤트가 실행");
+        };
+      };
+    </script>
+  </head>
+  <body>
+    <header>
+      <h2 class="logo" onclick="openHello(); msg1();">My Bank</h2>
+      <nav>
+        <!-- 메뉴 부분을 javascript로 만들어 추가해보기 -->
+        <ul id="topMenu">
+          <li><a href="#">개인뱅킹</a></li>
+          <li class="withborder"><a href="#">기업뱅킹</a></li>
+          <li><a href="#">상품</a></li>
+          <li><a href="#">문의하기</a></li>
+        </ul>
+      </nav>
+    </header>
+  </body>
+</html>
+
+    </footer>
+  </body>
+</html>

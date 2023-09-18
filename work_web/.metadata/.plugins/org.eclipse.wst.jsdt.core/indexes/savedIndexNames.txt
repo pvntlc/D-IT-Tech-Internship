@@ -1,0 +1,17 @@
+INDEX VERSION 1.4+C:\BNK\work_web\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+970059881.index
+1859301054.index
+3457134023.index
+3570586499.index
+844290570.index
+454647244.index
+2992441988.index
+4229878899.index
+3471621430.index
+3119222176.index
+1351100565.index
+1404208910.index
+3380705583.index
+663689219.index
+3312064196.index
+3842266521.index

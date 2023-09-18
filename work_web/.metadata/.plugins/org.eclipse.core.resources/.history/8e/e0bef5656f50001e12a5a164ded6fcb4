@@ -1,0 +1,14 @@
+package com.bnk;
+
+public class CustomerDAO {
+	public void add(Customer c) {
+		
+	}
+	
+	public boolean login(String id, String pw) {
+		boolean result = true;
+		
+		return result;
+	}
+
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>부산은행</title>
+	<link rel="stylesheet" type="text/css" href="common.css" />
+	<link rel="stylesheet" type="text/css" href="navbar.css" />
+	<link rel="stylesheet" type="text/css" href="footer.css" />
+	<style>
+		.contents {
+			display: flex;
+			
+			/* 플렉스 컨테이너 지정 */
+			margin-bottom: 30px;
+		}
+		
+		.contents section{
+			padding :33%;
+		}
+
+		.contents button {
+			float: right;
+		}
+
+		.title {
+			font-size: 20px;
+			font-weight: bold;
+		}
+		.contents section img{
+			object-fit: cover;
+			width: 90%;
+			justify-content: center;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="container">
+		<nav>
+			<ul>
+				<li class="title">안산은행</li>
+				<li><a href="./personal.html">개인</a></li>
+				<li><a href="./business.html">기업</a></li>
+				<li><a href="./login.html">로그인</a></li>
+				<li><a href="./register.html">회원가입</a></li>
+			</ul>
+		</nav>
+		<div class="banner">고객을 향한 단 하나의 진심, BNK 부산은행</div>
+		<main class="contents">
+			<section id="main1">
+				<img src="pingu.jpg" title="핑구 이미지 입니다." width="200px" alt="이미지가 없으면 대체되어 나옵니다." />
+				<h2>main-item1</h2>
+				점심을 먹고 저녁을 먹고 오늘은 축구를 합니다.
+				</br><button>button1</button>
+			</section>
+			<section id="main2">
+				<img src="pingu.jpg" title="핑구 이미지 입니다." width="200px" alt="이미지가 없으면 대체되어 나옵니다." />
+				<h2>main-item2</h2>
+				점심을 먹고 저녁을 먹고 오늘은 축구를 합니다.
+				</br><button>button2</button>
+			</section>
+			<section id="main3">
+				<img src="pingu.jpg" title="핑구 이미지 입니다." width="200px" alt="이미지가 없으면 대체되어 나옵니다." />
+				<h2>main-item3</h2>
+				점심을 먹고 저녁을 먹고 오늘은 축구를 합니다.
+				</br><button>button3</button>
+			</section>
+		</main>
+		<footer>
+			<hr>
+			<ul>
+				<li>경기도 안산시 상록구 감골2로 47</li>
+				<li>010-3380-6340</li>
+			</ul>
+		</footer>
+	</div>
+</body>
+
+</html>

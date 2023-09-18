@@ -1,0 +1,43 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type ="text/javascript">
+function del(cnum) {
+	var result = confirm("정말 삭제하실건가요?");
+	if(result){
+		alert("삭제하겠습니다.");
+		location.href="main.do?action=DEL&cnum=" + cnum;
+	}else{
+		alert("취소하였습니다.");
+	}}</script>
+</head>
+<body>
+<h1>회원 목록</h1>
+	<p>${aseq}님</p>
+	<table>
+		<tr>
+			<th>계좌번호</th>
+			<th>고객번호</th>
+			<th>상품번호</th>
+			<th>잔액</th>
+			<th>삭제</th>
+		</tr>
+		<c:forEach var="ac" items="${accountList}">
+			<tr>
+				<td><a href="main.do?action=VIEW&cnum=${ac.aseq} ">${ac.aseq}</td>
+				<td>${ac.cseq}</td>
+				<td>${ac.pseq}</td>
+				<td>${ac.balance}</td>
+				<td><a href="javascript:del(${ac.aseq })">삭제</td>
+			</tr>
+		</c:forEach>
+	</table>
+	<a href="index.jsp">메인페이지로 돌아가자!</a>
+
+</body>
+</html>

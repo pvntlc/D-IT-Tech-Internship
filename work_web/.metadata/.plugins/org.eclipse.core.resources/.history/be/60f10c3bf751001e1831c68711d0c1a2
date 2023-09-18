@@ -1,0 +1,70 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>회원 정보 수정하기</title>
+
+	<style>
+		h1 {
+			text-align: center;
+		}
+
+		#container {
+			width: 400px;
+			display: grid;
+
+			grid-template-columns: 1fr 2fr;
+			grid-gap: 5px 5px;
+			margin: auto;
+			margin-bottom: 10px;
+		}
+
+		#btn {
+			text-align: center;
+			margin: 5px;
+		}
+
+		label {
+			background-color: lightgray;
+			text-align: center;
+		}
+	</style>
+	<script>
+		function check(){
+			if(pw.value === pw2.value){
+				alert("비밀번호가 일치합니다 !");
+			}
+			else{
+				alert("비밀번호가 일치하지 않습니다.");
+				pw2.focus();
+			}
+		};
+	</script>
+
+</head>
+
+<body>
+	<h1>회원 가입</h1>
+	<form method="POST" action="main.do?action=REG">
+		<div id="container">
+			<label for="userName">회원이름</label><input type="text" id="userName" name="userName" required />
+			<label for="conts">관심사</label>
+			<div>
+				<input type="checkbox" name="conts" value="주식"/> 무식
+				<input type="checkbox" name="conts" value="펀드"/> 펀드
+				<input type="checkbox" name="conts" value="예금"/> 예금
+				<input type="checkbox" name="conts" value="적금"/> 적금
+			</div>
+
+		</div>
+		<div id="btn">
+			<input type="reset" value="취소" /><input type="submit" value="수정하기" />
+		</div>
+
+	</form>
+</body>
+
+</html>

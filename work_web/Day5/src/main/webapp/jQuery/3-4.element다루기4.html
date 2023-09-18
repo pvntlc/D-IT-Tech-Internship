@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        var product = {
+          no: "5",
+          name: "펀드",
+          input: "100000원",
+        };
+        var newProduct = "<tr>";
+        newProduct += "<td>" + product.no + "</td>";
+        newProduct += "<td>" + product.name + "</td>";
+        newProduct += "<td>" + product.input + "</td>";
+        newProduct += "</tr>";
+
+        $("tbody").append(newProduct);
+      });
+    </script>
+  </head>
+  <body>
+    <table border="1">
+      <caption>
+        상품 리스트
+      </caption>
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>상품명</th>
+          <th>최초 납임금</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>정기예금</td>
+          <td>1000원</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>주택청약저축</td>
+          <td>10000원</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>자유적금</td>
+          <td>0원</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>연금통장</td>
+          <td>-</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>상품합계</td>
+          <td>4개</td>
+          <td></td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+package com.bnk;
+
+import java.sql.SQLException;
+import java.util.List;
+
+public interface AccountService {
+
+	void add(AccountDto account) throws SQLException;
+
+	List<AccountDto> search() throws SQLException;
+
+	AccountDto search(String aseq) throws SQLException;
+
+	List<AccountDto> searchAseq(String aseq) throws SQLException;
+
+	List<AccountDto> searchCseq(String aseq) throws SQLException;
+
+	List<AccountDto> searchPsec(String aseq) throws SQLException;
+
+	List<AccountDto> searchBalance(String aseq) throws SQLException;
+
+	void delete(String aseq) throws SQLException;
+
+}

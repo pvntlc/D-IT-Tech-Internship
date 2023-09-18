@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Lotto</title>
+
+<style type="text/css">
+	div{
+		background: skyblue;
+ 		width : 500px;
+ 		height : 70px;
+ 		padding : 2em;
+ 		text-align: center;
+	}
+	
+	.number{
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		border-radius : 100%;
+		color : black;
+		background: yellow;
+		margin-right: 1em;
+		text-align: center;
+		line-height:40px;
+		font-size: 120%;
+		font-weight: bold;
+	}
+	.more{
+		position: fixed;
+		top: 0;
+  /* width: 100% */
+  left: 0;
+  right: 0
+	}	
+</style>
+
+</head>
+<body>
+	<h5 id ="more" onclick="javascript:append()">한번 더 번호 발생</h5>
+	<h3>대박을 기원합니다~~</h3>
+	<div id="result">     </div>	
+	<div id = "container"></div>
+	
+	
+<script type="text/javascript">
+
+	function startGame(){
+		var flags = new Array(46);
+		for(let i=1; i<flags.length; ++i){
+			flags[i] = false;
+		}
+		
+		for(let i=0; i<6; ++i){
+			let number;
+			do{
+				number = Math.floor(Math.random() * 45) + 1;
+			}while(flags[number]==true);
+			
+			//numbers[i] = number;
+			flags[number] = true;
+
+			result.innerHTML += "<span class='number'>"	+number+"</span>";
+		}
+	}
+	window.onload = startGame;
+	
+	function append(){
+		result.innerHTML += "<br/>";
+		startGame();
+	}
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+

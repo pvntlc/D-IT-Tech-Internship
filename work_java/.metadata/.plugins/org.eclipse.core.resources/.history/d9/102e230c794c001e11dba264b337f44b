@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div align="center">
+        <!--  테이블 캡션과 비슷한 역할 (많이 쓰지 않음)
+          <figure>는 설명 글을 붙여야 할 대상을 지정.
+        <figcaption> : 설명 글이 필요한 대상은 <figure> 태그로 묶고 설명 글은 <figcaption>태그로 묶는다.
+        설명 글을 붙일 수 있는 대상은 이미지나 오디오, 비디오 같은 미디어파일이나 텍스트 단락이나 표.
+        img태그 내 alt속성은 화면에 표시될 이미지가 없을때(로드 실패, 해당 위치에 없음 등) 대신 표현 된다.
+        -->
+        <figure>
+          <img src="./img/graph.jpg2" title="그래프 이미지 입니다." width="500px" alt="이미지가 없으면 대체되어 나옵니다."/>
+          <figcaption>예시 이미지로 사용한 그래프 이미지 입니다.</figcaption>
+        </figure>
+      </div>
+</body>
+</html>

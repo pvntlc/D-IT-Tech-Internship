@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공지사항</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    background-color: #3498db;
+    color: #fff;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label, input, textarea {
+    display: block;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 2px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+#noticeList {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+}
+
+#noticeList strong {
+    font-size: 18px;
+    color: #3498db;
+}
+
+#noticeList p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+
+</style>
+</head>
+<body>
+    <h1>공지사항 입력</h1>
+    <form id="noticeForm" method="post" action="#">
+        <label for="title">제목</label>
+        <input type="text" id="title" name="title" required><br><br>
+        <label for="content">내용</label>
+        <textarea id="content" name="content" rows="4" required></textarea><br><br>
+        <input type="submit" value="등록" onclick="javascript:openConfirm();">
+    </form>
+
+    <div id="noticeList">
+        <!-- 여기에 등록된 공지사항 목록을 표시할 수 있습니다. -->
+    </div>
+
+</body>
+<script>
+    function createFirework(x, y) {
+        const firework = document.createElement("div");
+        firework.className = "firework animate__animated animate__zoomIn"; // 애니메이션 클래스 추가
+        firework.style.left = x + "px";
+        firework.style.top = y + "px";
+        document.body.appendChild(firework);
+
+        setTimeout(() => {
+            firework.remove(); // 폭죽을 화면에서 제거
+        }, 1000); // 폭죽 효과 지속 시간 (1초)
+
+        // 추가적인 폭죽 애니메이션을 여기에 추가할 수 있습니다.
+    }
+
+    function openConfirm() {
+        if (confirm("정말 제출하시나요?")) {
+            // 확인 눌렀을 때 실행할 코드
+            // 폭죽 효과를 생성하고 화면에 표시합니다.
+            const titleInput = document.getElementById("title");
+            const contentInput = document.getElementById("content");
+            const title = titleInput.value;
+            const content = contentInput.value;
+            createFirework(50, 50); // 예시로 폭죽을 (50px, 50px) 위치에 생성
+        } else {
+            console.log("취소 눌렀네요.");
+        }
+    }
+
+</script>
+</html>

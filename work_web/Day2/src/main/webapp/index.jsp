@@ -1,0 +1,41 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Decaffeine Americano</title>
+</head>
+<body>
+
+	<%!//선언문
+	int k = 10;
+	
+
+	public void m() {
+		System.out.println("mmm");
+	}%>
+
+	<%
+	//서비스 메소드로 해석됨. Scriptlet
+	
+	
+	
+	for (int i = 0; i < 5; i++) {
+		
+		out.println(i + " : for문입니다.</br>");
+	}
+	
+	out.println("그냥 입출력입니다.");
+	m();
+	k+=Math.random()*50;
+	%>
+	<h1>k값을 출력</h1>
+	<%=k%>
+
+	<%--주석주석 개주석--%>
+	
+	<a href="second.jsp?num=5&user=pvntic">다음 페이지로</a>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+package com.bnk;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+@WebServlet({ "/MainServlet", "/main.do" })
+public class MainServlet extends HttpServlet {
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		
+		String user = request.getParameter("user");
+		if(user != null) {
+			Cookie c = new Cookie("user", user);
+			response.addCookie(c);
+			
+			HttpSession hs = request.getSession();
+			hs.setAttribute("user", user);
+		}else {
+			Cookie[] cs = request.getCookies();
+			System.out.println("클라이언트에서 가져온 내가만든쿠키쿠키");
+			for(Cookie c : cs) {
+				System.out.println(c.getName());
+				System.out.println(c.getValue());
+				System.out.println("=======================");
+			}
+		}
+		
+		response.sendRedirect("result.jsp");
+		
+		
+
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		doGet(request, response);
+	}
+
+}

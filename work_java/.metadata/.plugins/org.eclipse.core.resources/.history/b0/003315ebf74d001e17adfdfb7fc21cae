@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+
+    <script type="text/javascript">
+
+		function openAlert() {
+			alert("알림창입니다.");
+		}
+
+		function openConfirm() {
+			if (confirm("확인입니까?")) {
+				console.log("확인 눌렀네요.");
+			} else {
+				console.log("취소 눌렀네요.");
+			}
+		}
+
+		function openPrompt() {
+			var txt = prompt("문자열 입력", "사용자입력2");
+			console.log(txt);
+		}
+		
+		function listener(){
+			b1.onClick = openAlert;
+			b2.onClick = openConfirm;
+			document.querySelector("#b3").onClick=openPrompt;
+		}
+		window.onload = listener;
+		//document.querySelector("#b3").onclick=openPrompt;
+
+	</script>
+</head>
+<body>
+	<input type="button" id="b1" value="알림창" >
+	<input type="button" id="b2" value="확인창" >
+	<input type="button" id="b3" value="입력창">
+</body>
+</html>

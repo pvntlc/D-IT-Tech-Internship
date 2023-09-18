@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>클릭 이벤트</title>
+    <style>
+	  #sidebar {
+		    width: 20%;
+		    height: 150px;
+		    clear: both;
+		    display:flex; /* 플렉스 컨테이너 지정 */
+		    flex-direction: row;
+		  }
+	.menu {
+	    padding:5px 45px;
+	    margin:5px;   	
+	    background-color:aliceblue;   
+	  }
+   </style>
+    <script>
+      window.onload = function () {
+        var menus = document.getElementsByClassName("menu");
+        console.log(menus);
+        for (let i = 0; i < menus.length; i++) {
+          menus[i].addEventListener( "mouseover",   function () {
+              menus[i].style.background = "magenta";
+            } );
+          menus[i].addEventListener( "mouseout",  function () {
+              menus[i].style.background = "orange";
+            } );
+        }
+      };
+    </script>
+  </head>
+  <body>
+
+    <div class="container">
+      <div id="sidebar">
+        <div class="menu"><p>메뉴1</p></div>
+        <div class="menu"><p>메뉴2</p></div>
+        <div class="menu"><p>메뉴3</p></div>
+        <div class="menu"><p>메뉴4</p></div>
+        <div class="menu"><p>메뉴5</p></div>
+        <div class="menu"><p>메뉴6</p></div>
+      </div>
+ 
+  </body>
+</html>

@@ -1,0 +1,48 @@
+package com.bnk;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+@WebServlet("/test")
+public class TestServlet extends HttpServlet {
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// 1. 요청 파악
+		// 2. 클라이언트의 데이터 추출
+		// 3. 요청 처리
+		// 4. 결과 데이터 저장
+		// 5. 결과 페이지 이동
+
+		request.setAttribute("city", "Busan");
+		request.setAttribute("dto", new Car("49-6989", 6780));
+		List<Car> cars = new ArrayList<>();
+		cars.add(new Car("22-5678", 2000));
+		cars.add(new Car("13-5411", 3250));
+		cars.add(new Car("38-1769", 2630));
+		cars.add(new Car("14-8762", 5360));
+		cars.add(new Car("33-4856", 7980));
+
+		request.setAttribute("cars", cars);
+
+		HttpSession session = request.getSession();
+		session.setAttribute("msg", "Session입니다.");
+
+		ServletContext sc = request.getServletContext();
+		sc.setAttribute("data", "ServletContext입니다.");
+		
+		request.getRequestDispatcher("result.jsp").forward(request, response);
+		response.sendRedirect("result.jsp");
+
+	}
+
+}

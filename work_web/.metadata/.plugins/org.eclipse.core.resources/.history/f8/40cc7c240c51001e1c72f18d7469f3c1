@@ -1,0 +1,34 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Decaffeine Americano</title>
+</head>
+<body>
+
+	<%!//선언문
+
+	int k = 10;
+
+	public void m() {
+		for (int i = 0; i < 5; i++) {
+			System.out.println("mmm");
+			out.println(i + " : m 메소드입니다.");
+		}
+	}%>
+
+	<%
+	//서비스 메소드로 해석됨. Scriptlet
+	out.println("그냥 입출력입니다.");
+	m();
+	k++;
+	%>
+	<h5>k값을 출력</h5>
+	<%=k%>
+
+	<%--주석주석 하주석--%>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>테이블 구성 미리보기</title>
+    <style type="text/css">
+      table {
+        border: gray 1px solid;
+        width: 300px;
+        height: 300px;
+        text-align: center;
+      }
+      table th {
+        background-color: lightgray;
+      }
+      table td {
+        background-color: #33ccff;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 표의 시작과 끝을 알리는 table 태그 -->
+    <table>
+        <!-- 표의 제목 표현 caption -->
+      <caption>
+        [[insert Title]]
+      </caption>
+      <thead>
+        <!-- 행을 만드는 tr -->
+        <tr>
+        <!-- 셀을 만드는 th, td -->
+        <!-- th는 중앙정렬+bold  -->
+          <th>title 1</th>
+          <th>title 2</th>
+          <th>title 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+           <!-- td는 왼쪽 정렬+일반 굵기 -->
+          <td>data 1</td>
+          <td>data 2</td>
+          <td>data 3</td>
+        </tr>
+        <tr>
+          <td>data 4</td>
+          <td>data 5</td>
+          <td>data 6</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

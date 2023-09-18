@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form control</title>
+</head>
+<body>
+  <h2>form control - checkbox</h2>
+
+  <form>
+    <fieldset>
+      <legend>필수 입력</legend>
+      <ul type="none">
+        <li>
+          <label for="userid">아이디 : </label><input type="text" id="userid" name="userid" size="10" maxlength="16" value="아이디입력"/>
+        </li>
+        <li><label for="pass">비밀번호 : </label><input type="password" id="pass" name="pass"           size="10"
+          maxlength="16"
+          placeholder="비밀번호입력"/></li>
+          <!--  checked 속성은 여러 개의 항목 중 선택된 항목을 표시.
+        radio button은 name 속성의 값이 모두 일치해야 함.(name 속성이 같은 항목들 중 단일선택)
+        check box는 name 속성의 값과는 상관없이 다중 선택이 가능.
+        <input> tag의 type 속성을 checkbox, radio로 지정.
+        <input type=“checkbox” [속성=“속성값“]>
+        <input type=“radio” [속성=“속성값“]>
+      -->
+      <li>
+        <h3>좋아하는 과일은?</h3>
+        <input type="checkbox" name="fruit" value="사과" /> 사과
+        <input type="checkbox" name="fruit" value="수박" checked="checked" /> 수박
+        <input type="checkbox" name="fruit" value="딸기" /> 딸기
+        <input type="checkbox" name="fruit" value="포도" /> 포도<br />
+      </li>
+
+      </ul>
+    </fieldset>
+    <fieldset>
+      <legend>선택 입력</legend>
+      <ul type="none">
+        <li>
+          <label for="birth">생년월일(8자리)</label>
+          <input type="number" id="birth" name="birth" size="10">
+        </li>
+        <li>
+          <label for="years">나이 : 
+            <!-- <input type="number" id="years" name="years" min="1" max="100" value="20" />살</label> -->
+            <input type="range" id="years" name="years" min="1" max="100" value="20" />살</label>
+          </li>
+        <li>
+          <label for="phone">전화번호 : </label><input type="tel" id="phone" name="phone"  size="15" maxlength="11"  />
+        </li>
+        <li>
+          <label for="address">주소 : </label><input type="text" id="address" name="address" />
+        </li>
+        <li>
+          <label for="mail">이메일 : </label>
+          <input type="email" id="mail" name="mail" />
+        </li>
+        <li>
+          <label for="homepage">홈페이지 : </label>
+          <input type="url" id="homepage" name="homepage" />
+        </li>
+      </ul>
+    </fieldset>
+    <input type="submit" value="전송" />
+    <input type="reset" value="초기화" />
+  </form>
+</body>
+</html>

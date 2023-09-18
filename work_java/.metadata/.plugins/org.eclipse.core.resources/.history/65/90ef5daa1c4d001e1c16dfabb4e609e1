@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type Selector(타입선택자)</title>
+    <style type="text/css">
+        h2, div {
+        padding: 50px;
+        margin: 50px;
+        font-weight: bold;
+      }
+
+      div {
+        background: skyblue;
+        color: magenta;
+      }
+
+      p {
+        background: lightgray;
+        color: orange;
+      }
+      </style>
+</head>
+<body>
+  <h2>h2 선택자 확인하기 h2</h2>
+  <div>div 선택자 확인하기 div</div>
+  <p>p 선택자 확인하기 p</p>
+</body>
+</html>

@@ -1,0 +1,28 @@
+package com.bnk;
+
+import java.sql.SQLException;
+import java.util.List;
+
+public interface AccountDao {
+
+	void add(AccountDto account) throws SQLException;
+
+	List<AccountDto> search() throws SQLException;
+
+	AccountDto search(String aseq) throws SQLException;
+
+	List<AccountDto> searchAseq(String aseq) throws SQLException;
+
+	List<AccountDto> searchCseq(int cseq) throws SQLException;
+
+	List<AccountDto> searchPsec(int pseq) throws SQLException;
+
+	List<AccountDto> searchBalance(int balance) throws SQLException;
+	
+	void deposit(String aseq, int money) throws SQLException;
+
+	void delete(String aseq) throws SQLException;
+
+	void withdraw(String aseq, int money) throws SQLException;
+
+}

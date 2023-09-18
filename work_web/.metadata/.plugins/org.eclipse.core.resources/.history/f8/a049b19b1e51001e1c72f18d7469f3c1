@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8" import="com.bnk.Car"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Decaffeine Americano</title>
+</head>
+<body>
+
+	<p />
+	EL : CITY : ${city}
+	<br /> Car : ${dto.num} : ${dto.price}
+	<br /> Msg : ${msg}
+	<br />
+	<!-- 페이지 안에 있는지 가장 먼저 확인, 그 후 request 확인하고 그다음은 Session, 마지막으로 application을 확인한다. -->
+	data : ${data}
+	<br />
+	<p />
+
+	<%
+
+	%>
+</body>
+</html>

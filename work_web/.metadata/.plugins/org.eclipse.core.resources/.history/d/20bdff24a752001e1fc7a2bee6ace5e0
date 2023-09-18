@@ -1,0 +1,10 @@
+import java.sql.Connection;
+
+public class AccountDAOImpl {
+	
+	public void add() {
+		Connection con = DBPool.getConnection();
+		
+	}
+
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="javascript:windowClose();">함수 이용해서 닫기</button>
+    <a href="javascript:window.close();"> 메소드 이용해서 닫기 </a>
+    <script>
+      function windowClose() {
+        // window.close();
+        self.close();
+      }
+    </script>
+    <input type="text" name="test" id="test" />
+    <button onclick="send();">전송</button>
+    <script>
+      function send() {
+        var msg = document.getElementById("test").value;
+        opener.document.getElementById("view").innerHTML = msg;
+        opener.location.href = "https://search.naver.com/search.naver?query=" + msg;
+        self.close();
+      }
+    </script>
+</body>
+</html>
+
+BRICK

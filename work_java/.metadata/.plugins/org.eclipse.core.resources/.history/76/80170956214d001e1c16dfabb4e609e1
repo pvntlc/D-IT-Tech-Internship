@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model(margin, padding, border)</title>
+     <!-- 현재 화면에서 확인해야하는 부분 외에 기본 스타일들이 포함된 외부 css 파일 -->
+    <link rel="stylesheet" href="css/3-2.css">
+    <style>
+      ul {
+        background: antiquewhite;
+        border-style: dotted;
+        border-width: medium;
+        border-color: black;
+        /* ul에 적용해서 확인해보기 */
+        /* margin: 12px; */
+        /* padding: 3px; */
+      }
+      li {
+        list-style: none;
+        color: tomato;
+        background: skyblue;
+        border-style: solid;
+        /* li에 margin, padding 적용해보기 */
+        /* margin: 12px; */
+        /* padding: 12px; */
+      }
+      li.withborder {
+        border-style: dashed;
+        border-width: thick;
+        border-color: maroon;
+        /* margin을 top, right, bottom, left에 각각 적용하기 */
+        margin-top: 10px;
+        /* margin-right: 25px; */
+        /* margin-bottom: 15px; */
+        /* margin-left: 25px; */
+        /* margin: 30px 25px 15px 25px; */
+      }
+      table {
+        border: 1px solid gray;
+        /* border: 0; */
+        /* padding: 20px 5px; */
+        /* margin: 10px; */
+        width: 100%;
+      }
+      td{
+        text-align: left;
+      }
+      .cellPadding {
+        /* margin 적용되는지 확인해보기 */
+        /* margin: 10px; */
+        padding-left: 20px;
+        border: 2px solid steelblue;
+      }
+    </style>
+</head>
+<body>
+    <h2 class="logo">My Bank</h2>
+    <nav>
+      <!-- list에 margin, padding을 적용하여 박스모델에 대해서 확인해보자 -->
+        <ul id="topMenu">
+            <li><a href="#">개인뱅킹</a></li>
+            <li class="withborder"><a href="#">기업뱅킹</a></li>
+            <li><a href="#">상품</a></li>
+            <li><a href="#">문의하기</a></li>
+        </ul>
+    </nav>
+    <div>
+      <!-- 테이블에도 margin, padding을 적용해보자. -->
+        <table border="1">
+            <caption>
+              상품 리스트
+            </caption>
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>상품명</th>
+                <th>최초 납임금</th>
+                <th>가입기간</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="cellPadding">1</td>
+                <td class="cellPadding">정기예금</td>
+                <td class="cellPadding">1000원</td>
+                <td class="cellPadding">60개월</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>주택청약저축</td>
+                <td>10000원</td>
+                <td rowspan="2">최대 10년</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>자유적금</td>
+                <td>0원</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>연금통장</td>
+                <td colspan="2">-</td>
+              </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                  <td>상품합계</td>
+                  <td colspan="3">4개</td>
+                </tr>
+              </tfoot>
+          </table>
+    </div>	  
+</body>
+</html>
