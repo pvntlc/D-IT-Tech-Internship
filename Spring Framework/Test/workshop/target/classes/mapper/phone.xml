@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bnk.model.mapper.PhoneDAOMapper">
+	<select id="search" parameterType ="phone">
+	select * from phone order by pnum
+	</select>
+	<insert id="add" parameterType="phone">
+	Insert into phone values(#{pnum}, #{title}, #{price}, #{quantity}, #{pimg})
+	</insert>
+	<select id="search" parameterType ="int">
+	select * from phone where pnum = #{value} order by pnum
+	</select>
+</mapper>

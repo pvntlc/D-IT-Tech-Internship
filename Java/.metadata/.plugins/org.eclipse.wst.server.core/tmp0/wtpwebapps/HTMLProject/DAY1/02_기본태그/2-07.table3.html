@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 구조를 나타내는 태그</title>
+</head>
+<body>
+    <table border="1">
+        <caption>
+          상품 리스트
+        </caption>
+        <!-- 표의 구조를 지정하는 thead(제목), tbody(본문,내용), tfoot(요약) 
+        표의 구조는 브라우저 화면에서 보이지 않지만, 화면 낭독기나 자바스크립트 등에서 파악 가능-->
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>상품명</th>
+            <th>최초 납임금</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>정기예금</td>
+            <td>1000원</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>주택청약저축</td>
+            <td>10000원</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>자유적금</td>
+            <td>0원</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>연금통장</td>
+            <td>-</td>
+          </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+              <td>상품합계</td>
+              <td>4개</td>
+              <!-- 셀의 개수를 맞춰 줘야함 -->
+              <td></td>
+            </tr>
+          </tfoot>
+      </table>
+</body>
+</html>

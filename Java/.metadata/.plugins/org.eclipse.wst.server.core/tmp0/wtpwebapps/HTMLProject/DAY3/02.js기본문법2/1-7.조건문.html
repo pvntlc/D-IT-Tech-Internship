@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문</title>
+    <script>
+        var userNumber = prompt("숫자를 입력하세요.");
+
+        if (userNumber !== null) {
+            // if (userNumber % 3 === 0) 
+            //     alert("3의 배수입니다.");
+            // else 
+            //     alert("3의 배수가 아닙니다.");
+            (userNumber % 3 === 0) ? alert("3의 배수입니다.") : alert("3의 배수가 아닙니다.");
+        }else 
+        alert("입력이 취소됐습니다.");      
+
+
+        var score = 78;
+
+        switch (parseInt(score / 10)) {
+            case 10:
+            case 9:
+            console.log("A 학점입니다.");
+            break;
+            case 8:
+            console.log("B 학점입니다.");
+            break;
+            case 7:
+            console.log("C 학점입니다.");
+            break; // C 학점입니다. 출력됨.
+            default:
+            console.log("F 학점입니다.");
+        }
+    </script>
+</head>
+    
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 열 묶기</title>
+</head>
+<body>
+    <table border="1">
+        <caption>
+          상품 리스트
+        </caption>
+        <!-- 특정 열에 스타일을 지정할 때 사용하는 태그
+        반드시 caption태그 다음에 써야함(표 시작전에 명시) -->
+        <colgroup>
+          <!-- 표 전체 열의 개수만큼 col태그를 넣어야합니다.
+          스타일 속성을 지정하지 않는 열이 있을 경우 각각 작성해야 합니다. -->
+          <col style="background-color: aqua;">
+          <col > <!--스타일을 적용하지 않아도 col명시해야 합니다.-->
+          <col span="2" style="width: 150px; background-color: lavender;">
+          <!-- 스타일 속성이 같은 3,4번째 열을 묶어서 지정하기 위해 span속성 사용 -->
+        </colgroup>
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>상품명</th>
+            <th>최초 납임금</th>
+            <th>가입기간</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>정기예금</td>
+            <td>1000원</td>
+            <td>60개월</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>주택청약저축</td>
+            <td>10000원</td>
+            <!-- 행을 합치는 rowspan: 속성이 적용된 셀 기준으로 아래로 통합  -->
+            <td rowspan="2">최대 10년</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>자유적금</td>
+            <td>0원</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>연금통장</td>
+            <td colspan="2">-</td>
+          </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+              <td>상품합계</td>
+              <!--셀을 합치는 colspan : 속성이 지정된 셀을 기준으로 오른쪽으로 통합 -->
+              <td colspan="3">4개</td>
+            </tr>
+          </tfoot>
+      </table>
+</body>
+</html>

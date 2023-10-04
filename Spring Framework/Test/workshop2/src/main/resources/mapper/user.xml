@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bnk.mapper.UserMapper">
+	<select id="login" parameterType="map" resultType="boolean">
+		select count(*) from customer where username=#{userName}
+		and password=#{password}
+	</select>
+	<select id="search" resultType="customer">
+		select * from customer order by cnum
+	</select>
+	<insert id="add" parameterType="customer">
+		Insert into Customer values(cseq.nextval,
+		#{userName},#{password},#{conts},#{imgInfo})
+	</insert>
+	<select id="searchCnum" parameterType="int"
+		resultType="customer">
+		select * from customer where cnum=#{value}
+	</select>
+	<delete id="delete" parameterType="int">
+	DELETE FROM CUSTOMER WHERE CNUM = #{value}
+	</delete>
+	<update id="update" parameterType="customer">
+	UPDATE CUSTOMER SET CONTS=#{conts}, IMGINFO=#{imgInfo} WHERE CNUM = #{cnum}
+	</update>
+</mapper>

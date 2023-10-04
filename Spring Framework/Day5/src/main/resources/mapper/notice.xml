@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bnk.mapper.NoticeMapper">
+
+	<select id="search" resultType="notice" parameterType="String">
+		select * from notice 
+				<where>
+			<if test="value != null">title like #{value} </if>
+		</where>
+		order by seq
+	</select>
+
+	<select id="searchSeq" resultType="notice">
+		select * from notice where seq
+		= #{value} order by seq
+	</select>
+
+	<select id="searchTitle" resultType="notice">
+		select * from notice where
+		title like '%#{title}%' order by seq
+	</select>
+
+	<insert id="add" parameterType="notice">
+		Insert into notice
+		values(orders_noseq.nextval,
+		#{writer},#{title},#{cont},sysdate)
+	</insert>
+
+	<delete id="delete" parameterType="int">
+		DELETE FROM NOTICE WHERE SEQ = #{value}
+	</delete>
+
+	<update id="update" parameterType="notice">
+		UPDATE NOTICE SET TITLE=#{title}, CONT=#{cont} WHERE SEQ = #{seq}
+	</update>
+</mapper>

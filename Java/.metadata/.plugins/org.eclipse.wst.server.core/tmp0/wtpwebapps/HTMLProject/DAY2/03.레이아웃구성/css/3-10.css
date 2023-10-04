@@ -1,0 +1,97 @@
+/* 2-1이후 추가 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@600&display=swap');
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+h2.logo{
+    font-size:40px;   /* 글자 크기 */
+    font-weight:bold;
+    /* 2-2이후 추가 */
+    color:#53565A;   /* 글자 색*/
+    text-shadow:0 -1px 0 #222;  /* 그림자 색 */
+    text-align: left;
+    /* 텍스트를 세로로 가운데 정렬하기 위해 height와 line-height를 동일한 크기로 설정 */
+    line-height: 60px;
+    height: 60px;
+    /* 대소문자 변환 */ 
+    text-transform: uppercase;
+    /* 글자 간격 조정 */
+    letter-spacing: 2px;
+    text-decoration: underline;
+    text-decoration-color: rgb(203, 51, 59) ;
+}
+/* 2-3이후 추가 */
+#topMenu {
+    list-style-type:none;
+    
+}
+
+a{
+    text-decoration: none;
+    color:#53565A; 
+}
+
+/* 2-4이후 추가 */
+table{
+    /* 캡션 위치 조정 */
+    caption-side: top;
+    /* caption-side: bottom; */
+    border: 2px solid #53565A;
+    /* 표와 셀 테두리 합치기 */
+    border-collapse: collapse;
+}
+td,th {
+    /* 셀 테두리 검은색 점선으로 */
+    border: 1px dotted black;
+    padding: 10px;
+    text-align: center;
+}
+/* 3-5이후 추가 */
+header {
+    height: 100px;
+    line-height: 100px;
+  }
+nav ul li{
+    display: inline-block;
+}
+.logo{
+    /* 왼쪽으로 떠있게 만들기 */
+    float: left;
+  }
+  nav ul{
+    /* 오른쪽으로 떠있게 만들기 */
+    float: right;
+    margin-right: 10px;
+  }
+
+  /* 3-7 이후 추가. 웹사이트 구조 잡기 */
+  .logo{
+    position: absolute;
+    left: 30px;
+  }
+  #sidebar {
+    width: 20%;
+    height: 600px;
+    clear: both;
+    float: left;
+    display:flex; /* 플렉스 컨테이너 지정 */
+    flex-direction: column;
+  }
+  #contents {
+    width: 80%;
+    float: left;
+  }
+  footer{   
+    width:auto;   /* 너비 */
+    height:100px;  /* 높이 */
+    border-top:2px solid #222;
+    clear: both;
+  }
+  footer ul li{
+    list-style: none;
+    /* display: inline-block; */
+    float:right;  /* 가로로 배치 */ 
+    padding:5px 20px;
+  }
+  

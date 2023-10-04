@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		list();
+	});
+
+	function list(){
+		
+		$("#list").css("display","block");
+		$("#register").css("display","none");
+		$("#listResult").empty();
+		
+		$.ajax({
+			url : "/user/",
+			type : "get",
+			dataType : "json",
+			error : function(xhr, status,message){ alert("error:"+message); },
+			success : function(jsonData){
+				$(jsonData).each(function (index,item){
+					$("#listResult").append(
+					"<tr><td><a href='javascript:view("+item.cnum+")'>"
+					+item.userName+"</a></td><td>"+item.conts
+					+"</td><td><a href='javascript:del("+item.cnum
+					+")'>삭제</a></td><td><a href='Javascript:getImg("+item.cnum
+					+")'>"+item.imgInfo+"</a></td></tr>");
+			});
+		}
+		});
+	};
+	
+	function getImg(cnum){
+		fetch("user/" +cnum)
+		.then((response) => response.json())
+		.then(jsonData => {
+		$("#imgResult").html(
+		"<img src='resources/img/"+jsonData.imgInfo+"' />");
+		 });
+		};
+		
+		function del(cnum) {
+		    $.ajax({
+		        url: "/user/" + cnum,
+		        type: "DELETE",
+		        dataType: "json",
+		        error: function (xhr, status, message) {
+		            alert("Error: " + message);
+		        },
+		        success: function () {
+		            // If the deletion was successful, you can update the list of users.
+		            list();
+		        }
+		    });
+		}
+	
+	function register(){
+			$("#list").css("display","none");
+			$("#register").css("display","block");
+			$("#freg")[0].reset();
+		};
+	
+	function sendServer(){
+			let data = new FormData(freg);
+			let config={
+				method: 'POST',
+				body : data
+			};
+			fetch('user', config)
+			.then((response)=>list());
+		};
+	
+</script>
+</head>
+<body>
+	<div id="list">
+		<h1>회원 목록</h1>
+		<table>
+			<tr>
+				<th>이름</th>
+				<th>관심사</th>
+				<th>이미지</th>
+				<th>삭제</th>
+			</tr>
+			<tbody id="listResult">
+			</tbody>
+		</table>
+		<p />
+		<div id="imgResult"></div>
+		<a href="javascript:register()"> 회원 가입 </a>
+	</div>
+	
+	
+	<div id="register">
+	<h3>Form</h3>
+		<form id="freg" enctype="multipart/form-data">
+			<div class="row gtr-uniform">
+				<div class="col-6 col-12-xsmall">
+					<input type="text" name="userName" id="userName" value=""
+						placeholder="ID">
+				</div>
+				<div class="col-6 col-12-xsmall">
+					<input type="password" name="password" id="password" value=""
+						placeholder="Password">
+				</div>
+				<!-- Break -->
+				<div class="col-6 col-12-small">
+					<input type="checkbox" id="checkbox-alpha" name="conts" value="주식">
+					<label for="checkbox-alpha">무식</label>
+				</div>
+				<div class="col-6 col-12-small">
+					<input type="checkbox" id="checkbox-beta" name="conts" value="펀드">
+					<label for="checkbox-beta">펀드</label>
+				</div>
+				<div class="col-6 col-12-small">
+					<input type="checkbox" id="checkbox-gamma" name="conts" value="예금">
+					<label for="checkbox-gamma">예금</label>
+				</div>
+				<div class="col-6 col-12-small">
+					<input type="checkbox" id="checkbox-theta" name="conts" value="적금">
+					<label for="checkbox-theta">적금</label>
+				</div>
+				<div class="col-6 col-12-small">
+					<label for="uploadfile">이미지</label> <input type="file"
+						name="uploadfile" />
+				</div>
+				<!-- Break -->
+				<input type="button" value="회원가입" onclick="sendServer()" />
+			</div>
+		</form>
+		<a href="javascript:list()">회원목록</a>
+	</div>
+
+</body>
+</html>

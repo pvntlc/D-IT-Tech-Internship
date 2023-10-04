@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bnk.mapper.ProductMapper">
+
+	<select id="search" resultType="product" parameterType="String">
+		select * from product 
+				<where>
+			<if test="value != null">title like #{value} </if>
+		</where>
+		order by code
+	</select>
+	
+	<select id="searchBoon" resultType="product" parameterType="String">
+		select * from product 
+				<where>
+			<if test="value != null">category like #{value} </if>
+		</where>
+		order by code
+	</select>
+	
+	<select id="searchTitle" resultType="product" parameterType="String">
+		select * from product 
+		where title = #{value}
+	</select>
+
+	<select id="searchCode" resultType="product" parameterType="int">
+		select * from product where code
+		= #{value} order by code
+	</select>
+
+
+	<insert id="add" parameterType="product">
+		Insert into product
+		values(#{code},
+		#{title},#{category},#{rate},#{memo})
+	</insert>
+
+	<delete id="delete" parameterType="string">
+		DELETE FROM PRODUCT WHERE CODE = #{value}
+	</delete>
+
+</mapper>
